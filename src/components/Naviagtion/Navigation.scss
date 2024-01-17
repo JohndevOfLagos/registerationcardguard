@@ -1,0 +1,49 @@
+@use "../../sass/colours" as color;
+
+nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: color.$primary-color_dark-blue;
+
+   padding: 0 10rem;
+   &>span {
+      color: #000;
+      font-size: 1.5rem;
+      padding: .5rem 1rem;
+      background-color: color.$primary-color_yellow;
+      text-shadow: 2px 2px #fff;
+      font-weight: bold;
+   }
+
+
+
+
+   .nav-list {
+      display: flex;
+
+      line-height: 20px;
+
+      &>a {
+         padding: 2rem;
+         position: relative;
+         display: block;
+         color: color.$primary-color_light-yellow;
+         transition: all 200ms ease;
+         cursor: pointer;
+
+
+         &>span {
+            
+            font-size: 1.2rem;
+         }
+
+      }
+
+      &>a:hover {
+         color: #fff;
+         background-color: color.$primary-color_sky-blue;
+      }
+   }
+
+}
