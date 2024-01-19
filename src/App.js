@@ -1,9 +1,9 @@
-import { Home } from "./home/Home";
+import { ContManagement } from "./layouts/ContManagement";
 
 function App() {
   return (
     <>
-      <Home />
+      <ContManagement />
     </>
   );
 }

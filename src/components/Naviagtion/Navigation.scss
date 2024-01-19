@@ -2,18 +2,14 @@
 
 nav {
    display: flex;
-   justify-content: space-between;
+   flex-direction: column;
+   justify-content: center;
    align-items: center;
    background-color: color.$primary-color_dark-blue;
 
-   padding: 0 10rem;
-   &>span {
-      color: #000;
-      font-size: 1.5rem;
-      padding: .5rem 1rem;
-      background-color: color.$primary-color_yellow;
-      text-shadow: 2px 2px #fff;
-      font-weight: bold;
+   padding: 1rem 5rem;
+   @media (max-width:920px) {
+      
    }
 
 
@@ -21,29 +17,47 @@ nav {
 
    .nav-list {
       display: flex;
+      justify-content: center;
+      gap: 1rem;
+      @media (max-width:920px) {
+         flex-wrap: wrap;
+      }
 
-      line-height: 20px;
-
-      &>a {
-         padding: 2rem;
-         position: relative;
-         display: block;
-         color: color.$primary-color_light-yellow;
-         transition: all 200ms ease;
-         cursor: pointer;
-
-
-         &>span {
-            
-            font-size: 1.2rem;
-         }
+      &>li {
+         display: flex;
+         align-items: center;
 
       }
 
-      &>a:hover {
-         color: #fff;
-         background-color: color.$primary-color_sky-blue;
+   }
+
+   .nav-list_links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: transform 200ms ease-in;
+      color: color.$primary-color_light-yellow;
+      cursor: pointer;
+
+      //resused kindly convert to DRY
+      &>span {
+         background-color: transparent;
+         padding: 1rem 1rem;
+         border-top-left-radius: 8px;
+         border-top-right-radius: 8px;
+         border-bottom-right-radius: 8px;
+         transition: color, background-color 200ms ease-in;
       }
+
+
+      &.active>span {
+         background-color: color.$primary-color_yellow;
+         color: color.$primary-color_dark-blue;
+
+      }
+
    }
 
 }

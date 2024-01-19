@@ -1,0 +1,17 @@
+
+
+.ContentManagement {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: scroll;
+
+}
+
+
+.ContentManagement-layout {
+   display: flex;
+   flex-direction: column;
+   min-height: 100%;
+
+}
