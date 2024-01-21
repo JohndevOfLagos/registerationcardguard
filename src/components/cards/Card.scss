@@ -9,8 +9,9 @@
    justify-content: center;
    height: 100vh;
    background-color: #fff;
-   padding: 2rem;
+   padding: 2rem 6rem;
    @media (max-width:920px){
+      padding: 2rem 0rem;
       height: fit-content;
    }
 
@@ -21,7 +22,7 @@
    &>.inner-card {
      display: flex;
      justify-content: space-between;
-     padding: 0rem 5rem;
+     padding: 0rem .5rem;
      gap: 2rem;
      @media (max-width:920px) {
       padding: 0rem 1rem;

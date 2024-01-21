@@ -10,7 +10,6 @@ import { Admin } from '../pages/Admin/Admin'
 import "./ContManagement.scss"
 import { Route, Routes } from 'react-router-dom';
 
-import { Header } from '../components/header/Header'
 import { Navigation } from '../components/Naviagtion/Navigation'
 import { Home as Homepage } from '../pages/home/Home'
 import { Suspense } from 'react'
@@ -21,8 +20,6 @@ export const ContManagement = () => {
     
 <div className='ContentManagement'>
       <article className='ContentManagement-layout'>
-
-        <Header/>
         <Navigation/>
 
          <Suspense fallback={<div>Loading...</div>}>
