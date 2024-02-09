@@ -18,7 +18,7 @@ import { getAuth,
   signInWithEmailAndPassword, 
   onAuthStateChanged, 
   GoogleAuthProvider,
-  signInWithPopup
+  signInWithRedirect
 } from "firebase/auth";
 
 const firebaseConfig = {
@@ -144,7 +144,7 @@ export const Login = () => {
 
 
 function authSignInWithGoogle() {
-  signInWithPopup(auth, provider)
+  signInWithRedirect(auth, provider)
     .then((result) => {
       console.log("google signup successful");
     })

@@ -31,7 +31,7 @@ import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
   GoogleAuthProvider,
-  signInWithPopup,
+  signInWithRedirect,
 } from "firebase/auth";
 
 const firebaseConfig = {
@@ -92,7 +92,6 @@ export const NewRegistration = () => {
 
   const createAccountHandler = (event) => {
     event.preventDefault();
-    
     if (isEmailValid && isPasswordValid) {
       console.log('Logging in...');
       authCreateAccountWithEmail();
@@ -110,7 +109,6 @@ export const NewRegistration = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         clearAuthFields();
-
       })
       .catch((error) => {
         console.error(error.message);
@@ -137,7 +135,7 @@ export const NewRegistration = () => {
   // SIgn Up Google  HAndler 
 
   function authSignInWithGoogle() {
-    signInWithPopup(auth, provider)
+    signInWithRedirect(auth, provider)
       .then((result) => {
         console.log("google signup successful");
       })
