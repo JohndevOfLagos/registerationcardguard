@@ -3,27 +3,27 @@ import "./Form1.scss"
 import { Link } from "../../../node_modules/react-router-dom/dist/index";
 
 
-/*  FIREBASE  */
+// /*  FIREBASE  */
 
-import { initializeApp } from "firebase/app";
-import { getAuth, 
+// import { initializeApp } from "firebase/app";
+// import { getAuth, 
 
-} from "firebase/auth";
-import { getFirestore } from "firebase/firestore"
+// } from "firebase/auth";
+// import { getFirestore } from "firebase/firestore"
 
-const firebaseConfig = {
-  apiKey: "AIzaSyDsX2DYBMGmRAudDb6olsN-xt6H9YZjyYA",
-  authDomain: "registerationcardguard.firebaseapp.com",
-  projectId: "registerationcardguard",
-  storageBucket: "registerationcardguard.appspot.com",
-};
+// const firebaseConfig = {
+//   apiKey: "AIzaSyDsX2DYBMGmRAudDb6olsN-xt6H9YZjyYA",
+//   authDomain: "registerationcardguard.firebaseapp.com",
+//   projectId: "registerationcardguard",
+//   storageBucket: "registerationcardguard.appspot.com",
+// };
 
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore(app)
+// const app = initializeApp(firebaseConfig);
+// const auth = getAuth(app);
+// const db = getFirestore(app)
 
 
-// /* END OF FIREBASE*/
+// // /* END OF FIREBASE*/
 
 export const Form1 = () => {
   return (

@@ -10,7 +10,7 @@ import Glassdoor from "Assets/image/glassdor-rating.png";
 
 import ForgetPasswordImage from "Assets/icon/forgot_password.svg"
 /* NAVIGATIONS */
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 // /*  FIREBASE  */
 
