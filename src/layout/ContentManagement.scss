@@ -1,0 +1,21 @@
+@use "../sass/colours" as color;
+
+.content-management {
+   display: flex;
+   flex-direction: column;
+   height: 100vh;
+   overflow: hidden;
+
+
+
+   &>.content-management__layout {
+      min-height: 100%;
+      display: flex;
+
+      &>.content-management__content {
+         width: 100vw;
+      }
+   }
+
+}
+

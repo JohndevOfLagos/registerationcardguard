@@ -1,9 +1,8 @@
-import { ContManagement } from "./layouts/ContManagement";
-
+import { AppRoutes } from "routes/AppRoutes";
 function App() {
   return (
     <>
-      <ContManagement />
+      <AppRoutes/>
     </>
   );
 }

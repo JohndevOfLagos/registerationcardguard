@@ -1,0 +1,255 @@
+@use "../../sass/colours" as color;
+
+
+
+
+#user-name {
+   display: flex;
+   align-items: center;
+   text-align: center;
+   font-size: 1rem;
+   font-weight: 700;
+   font-family: 'Rowdies', sans-serif;
+   color: #fff;
+   padding: .2rem .5rem;
+   border-radius: 5rem;
+   background-color: color.$primary-color_dark-blue;
+}
+
+.Dashboard__header {
+   position: relative;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   @media (max-width:920px) {
+      flex-wrap: wrap;
+   }
+   align-items: center;
+   padding: .6rem 2rem;
+   background-color: #ffff;
+   box-shadow: 0px 0px 5px 0px #000;
+
+   &>.left-nav__header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+   }
+
+   &>.right-nav__header {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      @media (max-width:320px){
+         gap: 1rem;
+      }
+
+     
+   }
+
+
+   &>.left-nav__header li {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1rem;
+      font-weight: 500;
+
+
+      &>button {
+         max-width: max-content;
+         display: flex;
+         align-items: center;
+         height: 100%;
+         align-items: center;
+         border: none;
+         border-radius: .5rem;
+         padding: .2rem;
+         color: #fff;
+         background-color: color.$primary-color_dark-blue;
+         cursor: pointer;
+         font-size: .8rem;
+         font-weight: 600;
+
+         &>svg{
+           color: inherit;
+           font-size: 25px;
+         }
+      }
+
+
+
+
+   }
+
+   &>.right-nav__header li {
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      font-weight: 500;
+
+
+      
+      &>span {
+         display: flex;
+         align-items: center;
+         gap: .5rem;
+         border: none;
+         padding: .4rem .6rem;
+         border-radius: .5rem;
+         font-size: 1rem;
+
+
+         &>svg {
+            font-size: 25px;
+            color: color.$primary-color_purple;
+         }
+      }
+
+
+
+
+      &>button {
+         display: flex;
+         align-items: center;
+         gap: .5rem;
+         border: none;
+         padding: .4rem .6rem;
+         border-radius: .5rem;
+         font-size: 1rem;
+         background-color: color.$primary-color_purple;
+         color: #fff;
+         cursor: pointer;
+
+
+         &>svg {
+            font-size: 20px;
+         }
+      }
+
+      &>.user-profileImage {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         border: 1.5px solid rgb(76, 76, 76);
+         border-radius: .2rem;
+         cursor: pointer;
+
+
+         &>img {
+            display: block;
+            object-fit: cover;
+            height: 30px;
+            width: 30px;
+            border-radius: .2rem;
+         }
+      }
+
+
+   }
+
+}
+
+
+
+
+
+.userprofile {
+   position: absolute;
+   top: 115%;
+   right: 0.6%;
+   width: 300px;
+   background-color: #fff;
+   border-radius: .5rem;
+   box-shadow: 0px 1px 10px 0px lighten(#000, 80%);
+
+
+
+
+   &>.inner-userprofile {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+
+      &>.userprofile-name {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: .6rem 0;
+         padding-left: 1rem;
+         border-bottom: 1px solid lighten(#000, 80%);
+         font-size: 1rem;
+         font-weight: 400;
+      }
+
+   }
+
+
+   .userprofile__Navlist {
+      display: flex;
+      flex-direction: column;
+      margin: .6rem 0;
+
+
+      &>li {
+         display: flex;
+
+
+
+         &>a {
+            display: flex;
+            font-size: 1.1rem;
+            font-weight: 450;
+            padding: .6rem 0;
+            padding-left: 1rem;
+            width: 100%;
+            border-radius: .5rem;
+
+            &:hover {
+               background-color: lighten(#000, 96%);
+            }
+
+         }
+
+
+      }
+
+   }
+
+
+
+   .logout-btn {
+      display: flex;
+      align-items: center;
+      border: none;
+      border-top: 1px solid lighten(#000, 80%);
+      background-color: transparent;
+
+
+      cursor: pointer;
+
+      &>span {
+         margin-top: .6rem;
+         display: flex;
+         align-items: center;
+         gap: .5rem;
+         font-size: 1.1rem;
+         font-weight: 450;
+         color: red;
+         padding: .8rem 0;
+         padding-left: 1rem;
+         width: 100%;
+         border-radius: .5rem;
+
+
+         &:hover {
+            background-color: lighten(#000, 96%);
+         }
+
+         &>svg {
+            font-size: 20px;
+         }
+      }
+
+
+   }
+}

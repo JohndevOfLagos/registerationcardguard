@@ -1,0 +1,364 @@
+@use "../../sass/colours" as color;
+
+.NewRegistration {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   height: 100vh;
+
+
+}
+
+
+
+.inner-NewRegistration {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 2.5rem;
+   @media (max-width:600px) {
+      gap: 1rem;
+   }
+   height: 100%;
+   width: 100%;
+   background-color: #fff;
+
+
+
+   &>.Register-head {
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      gap: .4rem;
+      width: 80%;
+      align-items: center;
+      font-size: 1rem;
+      color: color.$primary-color_blue;
+
+      &>a {
+         font-weight: bold;
+         color: color.$primary-color_dark-blue;
+      }
+
+      &>a:hover {
+         color: color.$primary-color_blue;
+      }
+   }
+
+
+
+   &>footer {
+      display: flex;
+      gap: .5rem;
+      font-size: 1rem;
+      padding: 0 1rem;
+
+
+
+
+      &>span {
+         position: relative;
+
+      }
+
+      &>span::before {
+         content: "";
+         position: absolute;
+         bottom: -2px;
+         height: 1px;
+         width: 100%;
+         background-color: color.$primary-color_dark-blue;
+      }
+
+   }
+
+
+}
+
+
+
+
+.register-form {
+   display: flex;
+   flex-direction: column;
+   gap: 1.5rem;
+   width: 400px;
+   padding: 0 2rem;
+   &>.submit-btn {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      gap: .5rem;
+      border: none;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      background-color: color.$primary-color_dark-blue;
+      cursor: pointer;
+
+
+      &:disabled {
+         background-color: #ccc;
+         cursor: not-allowed;
+       }
+   }
+
+   &>.Google-Auth {
+      display: flex;
+      align-items: center;
+      padding: .8rem;
+      gap: .5rem;
+      border: 1px solid #000;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      background-color: #fff;
+      cursor: pointer;
+
+
+      &>svg {
+         font-size: 30px;
+      }
+   }
+
+   &>.Google-Auth:hover {
+      border: 1px solid color.$primary-color_blue;
+   }
+
+   &>h2 {
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+   }
+
+
+
+
+}
+
+
+
+.form-group {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   margin: 0;
+   padding: 0;
+
+
+
+   &>input[type="text"],
+   &>input[type="email"],
+   &>input[type="password"] {
+      font-size: 1.2rem;
+      width: 100%;
+      border: 1px solid #000;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      padding: 2rem 1rem .5rem;
+      padding-left: 1rem;
+      background-color: transparent;
+      outline: none;
+
+      &:focus~.label,
+      &:valid~.label {
+         top: 10px;
+         font-size: .8rem;
+         color: #333;
+      }  
+      
+      &:focus:invalid {
+         border-color: red;
+       }
+ 
+       &:not(:placeholder-shown):valid {
+         border: 1.5px solid color.$primary-color_blue;
+       }
+ 
+       & ~ .input-error {
+         position: absolute;
+         top: 100%;
+         left: 0;
+         font-size: 0.8rem;
+         padding: 0.1rem 0;
+         color: red;
+         visibility: hidden;
+       }
+ 
+       &:not(:placeholder-shown):invalid ~ .input-error,
+       &:focus ~ .input-error {
+         visibility: visible;
+       }
+     
+   }
+
+   &>.label {
+      position: absolute;  
+      top: 12px;
+      left: 0;
+      color: #ccc;
+      transition: all 0.3s ease;
+      pointer-events: none;
+      font-weight: 700;
+      color: #000;
+      font-size: .9rem;
+      padding: 0 1rem;
+   }
+
+   .eye-icon {
+      position: absolute;
+      top: 60%;
+      right: 20px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      user-select: none;
+      font-size: 18px;
+    }
+    
+
+   //  &>.input-error {
+   //    position: absolute;
+   //    top: 100%;
+   //    left: 0;
+   //    display: block;
+   //    font-size: 0.8rem;
+   //    padding: .1rem 0;
+   //    color: red;
+   //    visibility: hidden;
+   //  }
+   
+
+
+}
+
+
+
+
+/// Testimonie ///
+
+
+
+.registeter-testimonie {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   height: 100%;
+   width: 100%;
+   padding: 5rem 0rem;
+   background: linear-gradient(to top, rgba(color.$primary-color_light-blue, 1), rgba(color.$primary-color_white, 1));
+   @media (max-width:1169px) {
+     display: none;
+   }
+
+
+   &>footer {
+      // margin-top: 2rem;
+      font-size: 1.2rem;
+      font-weight: 500;
+      max-width: 400px;
+   }
+
+
+   &>.rating {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &>img {
+         display: block;
+         height: 100%;
+         width: 120px;
+         border-top-left-radius: 8px;
+         border-top-right-radius: 8px;
+         border-bottom-right-radius: 8px;
+         padding: .5rem;
+         background-color: #fff;
+         box-shadow: -4px 5px 0px 1px color.$primary-color_dark-blue;
+      }
+   }
+
+
+
+
+   &>.testimonie-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+
+
+      &>.inner-testimonie-card {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         padding: 2rem 1rem;
+         gap: 1rem;
+         border-top-left-radius: 8px;
+         border-top-right-radius: 8px;
+         border-bottom-right-radius: 8px;
+         background-color: #fff;
+         max-width: max-content;
+
+
+         &>.testimonie-image {
+            display: flex;
+            justify-content: center;
+
+            &>img {
+               height: 100%;
+               width: 60px;
+               border-radius: 99px;
+            }
+         }
+
+
+         &>p {
+            font-size: 1rem;
+            text-align: center;
+            max-width: 400px;
+         }
+      }
+   }
+}
+
+
+
+
+.testimonie-profile {
+   display: flex;
+   flex-direction: column;
+   position: absolute;
+   bottom: -40px;
+   left: 50%;
+
+
+   &>svg {
+      position: relative;
+      left: -10px;
+      bottom: -10px;
+      color: orange;
+      font-size: 20px;
+   }
+
+   &>p {
+      font-size: .9rem;
+      font-weight: 500;
+      padding: .5rem;
+      border-radius: 1rem;
+      background-color: orange;
+      color: #fff;
+      box-shadow: -5px 2px 5px 0px #00000032;
+      max-width: 150px;
+   }
+
+
+
+}

@@ -52,19 +52,29 @@
 .login-form {
    display: flex;
    flex-direction: column;
-   gap: .5rem;
-   width: 350px;
+   gap: 1.5rem;
+   width: 400px;
+   padding: 0 2rem;
 
 
    &>.login-btn {
+      margin-top: 1.5rem;
       padding: 1rem;
       gap: .5rem;
       border: none;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
       color: #fff;
       font-size: 1rem;
       font-weight: 600;
       background-color: color.$primary-color_dark-blue;
       cursor: pointer;
+
+      &:disabled {
+         background-color: #ccc;
+         cursor: not-allowed;
+       }
    }
 
 
@@ -75,6 +85,9 @@
       padding: .8rem;
       gap: .5rem;
       border: 1px solid #000;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
       font-size: 1rem;
       font-weight: 600;
       background-color: #fff;
@@ -93,6 +106,29 @@
       margin-bottom: 1rem;
    }
 
+
+    &>.forgetpassword-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+        font-size: 1rem;
+
+        &>a {
+         position: relative;
+          text-transform: capitalize;
+          font-weight: bold;
+          color: color.$primary-color_dark-blue;
+        }
+        &>a::before {
+         content: "";
+         position: absolute;
+         bottom: 0;
+         height: 1.5px ;
+         width: 100%;
+         background-color: color.$primary-color_dark-blue;
+        }
+    }
 
 
 
@@ -114,13 +150,15 @@
    margin: 0;
    padding: 0;
 
-
-
+   & > input[type="text"],
    &>input[type="email"],
    &>input[type="password"] {
       font-size: 1.2rem;
       width: 100%;
       border: 1px solid #000;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
       padding: 2rem 1rem .5rem;
       padding-left: 1rem;
       background-color: transparent;
@@ -132,6 +170,23 @@
          font-size: .8rem;
          color: #333;
       }
+
+      // &:focus:invalid {
+      //    border-color: red;
+      // }
+
+      // &:not(:placeholder-shown):valid {
+      //    border: 1.5px solid lighten(color.$primary-color_blue, $amount: 10%);
+      // }
+
+      // & ~ .input-error {
+      //    visibility: hidden;
+      // }
+
+      // &:not(:placeholder-shown):invalid ~ .input-error,
+      // &:focus ~ .input-error {
+      //    visibility: visible;
+      // }
    }
 
    &>.label {
@@ -147,6 +202,36 @@
       padding: 0 1rem;
    }
 
+
+   .login__eye-icon {
+      position: absolute;
+      top: 60%;
+      right: 20px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      user-select: none;
+      font-size: 18px;
+    }
+
+
+
+   &>.input-error {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      font-size: 0.8rem;
+      padding: .1rem 0;
+      color: red;
+    }
+
+
+   //  & > input:not(:focus):not(:placeholder-shown):invalid ~ .input-error {
+   //    visibility: visible;
+   // }
+    
+
+
+
 }
 
 
@@ -154,7 +239,8 @@
 
 
 
-.testimonie {
+
+.login-testimonie {
    display: flex;
    flex-direction: column;
    justify-content: space-between;
@@ -163,6 +249,10 @@
    width: 100%;
    padding: 5rem 0rem;
    background: linear-gradient(to top, rgba(color.$primary-color_light-blue, 1), rgba(color.$primary-color_white, 1));
+   @media (max-width:1169px) {
+      display: none;
+    }
+ 
 
 
    &>footer {
@@ -256,6 +346,7 @@
 
    &>p {
       font-size: .9rem;
+      font-weight: 500;
       padding: .5rem;
       border-radius: 1rem;
       background-color: orange;
